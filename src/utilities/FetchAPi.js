@@ -1,19 +1,19 @@
-import axios from  'axios' ;
+import axios from 'axios';
 
-const BASE_URL = "https://youtube-v31.p.rapidapi.com/search";//BasicURL
+export const BASE_URL = 'https://youtube-v31.p.rapidapi.com/';
 
 const options = {
-  url:  BASE_URL ,
-  params: { 
-    maxResults: '50'
+  params: {
+    maxResults: 50,
   },
   headers: {
-    'X-RapidAPI-Key': process.env.REACT_APP_API_FROM_RAPID_API,//Global Variable in .env//
-    'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-  }
+    'X-RapidAPI-Key':  '18b154eb2cmsh5ff986c4f2b9168p1faf1fjsn71139914d57d',
+    'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
+  },
 };
-//Fetching Api Request--- According to category
+
 export const FetchAPI = async (url) => {
- const {data} = await axios.get(`${BASE_URL}/${url}`,options);
- return data;
-}
+  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+
+  return data;
+};

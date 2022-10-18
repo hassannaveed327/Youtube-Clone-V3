@@ -1,6 +1,6 @@
-import React from 'react'
-import { Stack } from '@mui/material'
-import   {categories}   from '../utilities/constants'
+import {React } from 'react';
+import { Stack } from '@mui/material';
+import   {categories}   from '../utilities/constants';
 const Sidebar = (props) => {
     const {selectedCategory,setselectedCategory} = props;
     return(
